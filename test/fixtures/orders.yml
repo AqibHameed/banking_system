@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_time: 2018-07-31 20:40:39
+  client: one
+  transfer_agent: one
+
+two:
+  order_time: 2018-07-31 20:40:39
+  client: two
+  transfer_agent: two
