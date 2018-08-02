@@ -2,7 +2,6 @@ class CreateAccounts < ActiveRecord::Migration[5.1]
   def change
     create_table :accounts do |t|
       t.string :account_number
-      t.string :string
       t.integer :account_type
       t.decimal :balance
       t.references :client, foreign_key: true

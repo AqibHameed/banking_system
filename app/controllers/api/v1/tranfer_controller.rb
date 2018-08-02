@@ -45,7 +45,7 @@ class Api::V1::TranferController < ApplicationController
 	if errors.empty?
 		transfer.update(transfer_time: DateTime.now)
 		transfer.save
-		render json:{message: "Transaction done Sucessfully"},status:401
+		render json:{message: "Transaction done Sucessfully"},status:200
 	else
 		render json:{errors:@errors.flatten},status:401
 	end	

@@ -1,6 +1,7 @@
 module PrintBalance
   extend ActiveSupport::Concern
 
+  #script​ ​ will​ ​ print​ ​ the​ ​ balance​ ​ of​ ​ every​ ​ account​ ​ before​ ​ and​ ​ after the​ ​ transfers​
   def file_write(balance_status, account_number, balance)
     target  = "./app/controllers/concerns/show_me_the_money.rb"
     content = <<-RUBY
@@ -12,6 +13,7 @@ module PrintBalance
     end
   end
 
+  #​print the history​ ​of​ ​the​ ​transfer​ ​amount of​ bank.
   def print_history_of_bank(transfers, bank_name)
   	  target  = "./app/controllers/concerns/show_me_the_money.rb"
       content = <<-RUBY

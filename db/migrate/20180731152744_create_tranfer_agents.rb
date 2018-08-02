@@ -2,7 +2,6 @@ class CreateTranferAgents < ActiveRecord::Migration[5.1]
   def change
     create_table :tranfer_agents do |t|
       t.string :first_name
-      t.string :string
       t.string :last_name
       t.string :address
       t.string :phone_number

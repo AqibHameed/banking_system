@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 20180731202006) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "account_number"
-    t.string "string"
     t.integer "account_type"
     t.decimal "balance"
     t.integer "client_id"
@@ -37,7 +36,6 @@ ActiveRecord::Schema.define(version: 20180731202006) do
 
   create_table "clients", force: :cascade do |t|
     t.string "first_name"
-    t.string "string"
     t.string "last_name"
     t.string "email"
     t.string "phone_number"
@@ -59,7 +57,6 @@ ActiveRecord::Schema.define(version: 20180731202006) do
 
   create_table "tranfer_agents", force: :cascade do |t|
     t.string "first_name"
-    t.string "string"
     t.string "last_name"
     t.string "address"
     t.string "phone_number"
@@ -71,7 +68,7 @@ ActiveRecord::Schema.define(version: 20180731202006) do
   end
 
   create_table "transfers", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "amount"
     t.integer "transfer_type"
     t.datetime "transfer_time"
